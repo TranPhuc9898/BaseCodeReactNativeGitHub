@@ -37,6 +37,9 @@ const SideBar: React.FC<ISideBar> = ({ openMenu }) => {
   const Hello = () => {
     navigation.navigate('FavorScreen')
   }
+  const HelloPokemon = () => {
+    navigation.navigate('PokemonScreen')
+  }
   return (
     <View style={styles.Container}>
       <Animated.View style={[containerAnimatedStyle]}>
@@ -51,6 +54,18 @@ const SideBar: React.FC<ISideBar> = ({ openMenu }) => {
         >
           <TouchableOpacity onPress={Hello}>
             <Text>FavorScreen</Text>
+          </TouchableOpacity>
+        </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            width: 170,
+            padding: 12,
+            borderBottomWidth: 2
+          }}
+        >
+          <TouchableOpacity onPress={HelloPokemon}>
+            <Text>PokemonScreen</Text>
           </TouchableOpacity>
         </View>
       </Animated.View>
