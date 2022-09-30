@@ -53,9 +53,9 @@ const HomeScreen = () => {
   const [openSignModal, setOpenSignModal] = useState(false)
 
   useEffect(() => {
-    // const options = { damping: 5 }
-    // contentRotateY.value = withSpring(openMenu ? -30 : 0, options)
-    // contentTranslateX.value = withSpring(openMenu ? 30 : 0, options)
+    const options = { damping: 5 }
+    contentRotateY.value = withSpring(openMenu ? -30 : 0, options)
+    contentTranslateX.value = withSpring(openMenu ? 30 : 0, options)
   }, [openMenu, openOnboardModal])
 
   const animatedContentSyle = useAnimatedStyle(() => ({

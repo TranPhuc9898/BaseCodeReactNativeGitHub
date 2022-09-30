@@ -16,6 +16,7 @@ import SideBar from '../components/SideBar/SideBar'
 import SideBar2 from '../components/SideBar2/SideBar2'
 import FavorScreen from '../screens/FavorScreen/FavorScreen'
 import DetailScreen from '@/screens/DetailScreen/DetailScreen'
+import PokemonScreen from '@/screens/PokemonScreen/PokemonScreen'
 
 export type RootStackParams = {
   HomeStackNavigator: undefined
@@ -24,6 +25,7 @@ export type HomeDrawerParamList = {
   HomeScreen: {}
   FavorScreen: {}
   DetailScreen: {}
+  PokemonScreen: {}
 }
 const Stack = createStackNavigator<RootStackParams>()
 const Drawer = createDrawerNavigator<HomeDrawerParamList>()
@@ -55,6 +57,13 @@ function Home() {
       <Drawer.Screen
         name="DetailScreen"
         component={DetailScreen}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Drawer.Screen
+        name="PokemonScreen"
+        component={PokemonScreen}
         options={{
           headerShown: false
         }}

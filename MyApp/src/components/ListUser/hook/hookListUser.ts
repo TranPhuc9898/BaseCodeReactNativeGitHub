@@ -46,6 +46,7 @@ function hookListUser() {
       }
 
       fetchAPI(search)
+      console.log(      fetchAPI(search),"      fetchAPI(search)")
 
       setLoading(true)
     }
